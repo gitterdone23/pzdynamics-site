@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>PZ Dynamics</title>
-<meta name="description" content="PZ Dynamics is a solo software studio. Servd, a cook-planning app, is the first thing it's shipped.">
+<meta name="description" content="PZ Dynamics is a Canadian solo software and tech studio. Servd, a cook-planning app, is its first project.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;600;700&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet">
@@ -100,19 +100,44 @@
     color: var(--ink);
     margin: 0 0 20px;
   }
+  .section-label {
+    font-weight: 600;
+    font-size: 12px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--caption);
+    margin: 40px 0 14px;
+  }
   .app-card {
     background: var(--plate);
     border: 1px solid var(--plate-border);
     border-radius: 10px;
     padding: 24px;
-    margin: 32px 0;
+  }
+  .app-card-header {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin-bottom: 16px;
+  }
+  .app-icon {
+    width: 56px;
+    height: 56px;
+    border-radius: 14px;
+    flex-shrink: 0;
+    display: block;
   }
   .app-card h2 {
     font-family: 'Archivo', system-ui, sans-serif;
     font-weight: 600;
     font-size: 19px;
     color: var(--heading);
-    margin: 0 0 8px;
+    margin: 0 0 2px;
+  }
+  .app-card .tagline {
+    font-size: 13.5px;
+    color: var(--caption);
+    margin: 0;
   }
   .app-card p { margin-bottom: 16px; }
   .links { display: flex; flex-wrap: wrap; align-items: center; gap: 14px; }
@@ -150,21 +175,22 @@
       <div class="wordmark">PZ DYNAMICS</div>
     </div>
 
-    <h1>A solo software studio. Servd is the first thing I've shipped.</h1>
-    <p>
-      PZ Dynamics is me — I design and build small, focused apps. Servd, a
-      cook-planning app for coordinating multiple dishes at once, is the
-      first one out the door. More projects are in progress; this page will
-      grow as they ship.
-    </p>
+    <h1>PZ Dynamics is a Canadian solo software and tech studio.</h1>
 
+    <p class="section-label">Projects</p>
     <div class="app-card">
-      <h2>Servd: Cook Smarter</h2>
+      <div class="app-card-header">
+        <img src="servd-icon.png" alt="" class="app-icon">
+        <div>
+          <h2>Servd: Cook Smarter</h2>
+          <p class="tagline">Available on the App Store and Google Play</p>
+        </div>
+      </div>
       <p>
         Servd helps people cooking a full meal — not just one recipe — build
         a single timed plan across everything they're making, so it all
         lands on the table together instead of one dish going cold while
-        another finishes. Available now on the App Store and Google Play.
+        another finishes.
       </p>
       <div class="links">
         <a href="https://apps.apple.com/app/id6801662394">
