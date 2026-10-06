@@ -115,23 +115,18 @@
     margin: 0 0 8px;
   }
   .app-card p { margin-bottom: 16px; }
-  .links { display: flex; flex-wrap: wrap; gap: 10px; }
-  .btn {
-    display: inline-block;
-    font-family: 'Work Sans', sans-serif;
-    font-weight: 600;
-    font-size: 14px;
-    color: #fff;
-    background: var(--berry);
-    text-decoration: none;
-    padding: 10px 18px;
-    border-radius: 999px;
+  .links { display: flex; flex-wrap: wrap; align-items: center; gap: 14px; }
+  /* Badges on a fixed white chip regardless of theme — Apple's black badge
+     needs a light ground to stay visible, and the app-card itself goes dark
+     in dark mode. */
+  .links a {
+    display: inline-flex;
+    align-items: center;
+    background: #fff;
+    border-radius: 8px;
+    padding: 6px 10px;
   }
-  .btn.secondary {
-    background: transparent;
-    color: var(--berry);
-    border: 1px solid var(--berry);
-  }
+  .links img { height: 40px; width: auto; display: block; }
   footer {
     margin-top: 56px;
     padding-top: 24px;
@@ -172,8 +167,12 @@
         another finishes. Available now on the App Store and Google Play.
       </p>
       <div class="links">
-        <a class="btn" href="https://apps.apple.com/app/id6801662394">App Store</a>
-        <a class="btn secondary" href="https://play.google.com/store/apps/details?id=com.servd.app">Google Play</a>
+        <a href="https://apps.apple.com/app/id6801662394">
+          <img src="app-store-badge.svg" alt="Download on the App Store">
+        </a>
+        <a href="https://play.google.com/store/apps/details?id=com.servd.app">
+          <img src="google-play-badge.svg" alt="Get it on Google Play">
+        </a>
       </div>
     </div>
 
