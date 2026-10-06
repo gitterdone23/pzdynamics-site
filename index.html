@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>PZ Dynamics</title>
+<meta name="description" content="PZ Dynamics builds Servd, a cook-planning app for coordinating multiple dishes at once.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bitter:wght@400;700&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --cream: #FBFAF3;
+    --deep-olive: #4B4826;
+    --charcoal-olive: #2E2C18;
+    --moss: #7D7A3A;
+    --wheat: #C1A57F;
+    --sand: #DFCEAD;
+    color-scheme: light;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--cream);
+    color: var(--charcoal-olive);
+    font-family: 'Work Sans', system-ui, sans-serif;
+    line-height: 1.6;
+  }
+  .wrap {
+    max-width: 640px;
+    margin: 0 auto;
+    padding: 72px 24px 48px;
+  }
+  .mark {
+    font-family: 'Bitter', Georgia, serif;
+    font-weight: 700;
+    font-size: 15px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--moss);
+    margin-bottom: 40px;
+  }
+  h1 {
+    font-family: 'Bitter', Georgia, serif;
+    font-weight: 700;
+    font-size: 34px;
+    color: var(--deep-olive);
+    margin: 0 0 16px;
+    line-height: 1.25;
+  }
+  p {
+    font-size: 16px;
+    color: var(--charcoal-olive);
+    margin: 0 0 20px;
+  }
+  .app-card {
+    background: #fff;
+    border: 1px solid var(--sand);
+    border-radius: 16px;
+    padding: 24px;
+    margin: 32px 0;
+  }
+  .app-card h2 {
+    font-family: 'Bitter', Georgia, serif;
+    font-size: 20px;
+    color: var(--deep-olive);
+    margin: 0 0 8px;
+  }
+  .app-card p { margin-bottom: 16px; }
+  .links { display: flex; flex-wrap: wrap; gap: 10px; }
+  .btn {
+    display: inline-block;
+    font-family: 'Work Sans', sans-serif;
+    font-weight: 600;
+    font-size: 14px;
+    color: #fff;
+    background: var(--moss);
+    text-decoration: none;
+    padding: 10px 18px;
+    border-radius: 999px;
+  }
+  .btn.secondary {
+    background: transparent;
+    color: var(--moss);
+    border: 1px solid var(--moss);
+  }
+  footer {
+    margin-top: 56px;
+    padding-top: 24px;
+    border-top: 1px solid var(--sand);
+    font-size: 13px;
+    color: var(--wheat);
+  }
+  footer a { color: var(--moss); }
+  footer .legal { margin-top: 8px; }
+  footer .legal a { margin-right: 16px; }
+</style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="mark">PZ Dynamics</div>
+
+    <h1>We build Servd, a cook-planning app for coordinating multiple dishes at once.</h1>
+    <p>
+      Servd helps people cooking a full meal — not just one recipe — build a single
+      timed plan across everything they're making, so it all lands on the table
+      together instead of one dish going cold while another finishes.
+    </p>
+
+    <div class="app-card">
+      <h2>Servd: Cook Smarter</h2>
+      <p>Available now on the App Store and Google Play.</p>
+      <div class="links">
+        <a class="btn" href="https://apps.apple.com/app/id6801662394">App Store</a>
+        <a class="btn secondary" href="https://play.google.com/store/apps/details?id=com.servd.app">Google Play</a>
+      </div>
+    </div>
+
+    <p>
+      Questions about Servd or PZ Dynamics? Reach us at
+      <a href="mailto:servd.app@gmail.com">servd.app@gmail.com</a>.
+    </p>
+
+    <footer>
+      &copy; 2026 PZ Dynamics
+      <div class="legal">
+        <a href="https://servdapp.notion.site/Servd-Terms-of-Service-3bc58f6b2f7f80b0afb4e146d841f09f">Terms of Use</a>
+        <a href="https://servdapp.notion.site/Servd-Privacy-Policy-3bc58f6b2f7f808ca83dd8a07e14fa4a">Privacy Policy</a>
+      </div>
+    </footer>
+  </div>
+</body>
+</html>
