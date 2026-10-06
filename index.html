@@ -7,63 +7,111 @@
 <meta name="description" content="PZ Dynamics builds Servd, a cook-planning app for coordinating multiple dishes at once.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bitter:wght@400;700&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;600;700&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
   :root {
-    --cream: #FBFAF3;
-    --deep-olive: #4B4826;
-    --charcoal-olive: #2E2C18;
-    --moss: #7D7A3A;
-    --wheat: #C1A57F;
-    --sand: #DFCEAD;
+    --steel: #F1F1EE;
+    --slate: #6B6F76;
+    --pine: #2F5744;
+    --berry: #A8406A;
+    --graphite: #2A2D33;
+
+    --bg: var(--steel);
+    --ink: #52565D;
+    --heading: var(--graphite);
+    --plate: #FFFFFF;
+    --plate-border: #DDDBD4;
+    --accent: var(--berry);
+    --caption: #7B7E84;
+
     color-scheme: light;
+    padding-top: env(safe-area-inset-top, 0px);
+    padding-bottom: env(safe-area-inset-bottom, 0px);
   }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #1A1B1E;
+      --ink: #C9CAD0;
+      --heading: #F5F4EF;
+      --plate: #232428;
+      --plate-border: #34363B;
+      --slate: #8A8D93;
+      --pine: #5A9478;
+      --berry: #D37DA0;
+      --accent: var(--berry);
+      --caption: #86898F;
+      color-scheme: dark;
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #1A1B1E;
+    --ink: #C9CAD0;
+    --heading: #F5F4EF;
+    --plate: #232428;
+    --plate-border: #34363B;
+    --slate: #8A8D93;
+    --pine: #5A9478;
+    --berry: #D37DA0;
+    --accent: var(--berry);
+    --caption: #86898F;
+    color-scheme: dark;
+  }
+
   * { box-sizing: border-box; }
   body {
     margin: 0;
-    background: var(--cream);
-    color: var(--charcoal-olive);
+    background: var(--bg);
+    color: var(--ink);
     font-family: 'Work Sans', system-ui, sans-serif;
     line-height: 1.6;
   }
   .wrap {
     max-width: 640px;
     margin: 0 auto;
-    padding: 72px 24px 48px;
+    padding-inline: 24px;
+    padding-block: 72px 48px;
   }
-  .mark {
-    font-family: 'Bitter', Georgia, serif;
+  .mark-row {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin-bottom: 44px;
+  }
+  .mark-row svg { display: block; flex-shrink: 0; }
+  .mark-row .wordmark {
+    font-family: 'Archivo', system-ui, sans-serif;
     font-weight: 700;
-    font-size: 15px;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-    color: var(--moss);
-    margin-bottom: 40px;
+    font-size: 17px;
+    letter-spacing: -0.01em;
+    color: var(--heading);
   }
   h1 {
-    font-family: 'Bitter', Georgia, serif;
+    font-family: 'Archivo', system-ui, sans-serif;
     font-weight: 700;
-    font-size: 34px;
-    color: var(--deep-olive);
+    font-size: 32px;
+    letter-spacing: -0.015em;
+    color: var(--heading);
     margin: 0 0 16px;
     line-height: 1.25;
+    text-wrap: balance;
   }
   p {
     font-size: 16px;
-    color: var(--charcoal-olive);
+    color: var(--ink);
     margin: 0 0 20px;
   }
   .app-card {
-    background: #fff;
-    border: 1px solid var(--sand);
-    border-radius: 16px;
+    background: var(--plate);
+    border: 1px solid var(--plate-border);
+    border-radius: 10px;
     padding: 24px;
     margin: 32px 0;
   }
   .app-card h2 {
-    font-family: 'Bitter', Georgia, serif;
-    font-size: 20px;
-    color: var(--deep-olive);
+    font-family: 'Archivo', system-ui, sans-serif;
+    font-weight: 600;
+    font-size: 19px;
+    color: var(--heading);
     margin: 0 0 8px;
   }
   .app-card p { margin-bottom: 16px; }
@@ -74,31 +122,38 @@
     font-weight: 600;
     font-size: 14px;
     color: #fff;
-    background: var(--moss);
+    background: var(--berry);
     text-decoration: none;
     padding: 10px 18px;
     border-radius: 999px;
   }
   .btn.secondary {
     background: transparent;
-    color: var(--moss);
-    border: 1px solid var(--moss);
+    color: var(--berry);
+    border: 1px solid var(--berry);
   }
   footer {
     margin-top: 56px;
     padding-top: 24px;
-    border-top: 1px solid var(--sand);
+    border-top: 1px solid var(--plate-border);
     font-size: 13px;
-    color: var(--wheat);
+    color: var(--caption);
   }
-  footer a { color: var(--moss); }
+  footer a { color: var(--accent); }
   footer .legal { margin-top: 8px; }
   footer .legal a { margin-right: 16px; }
 </style>
 </head>
 <body>
   <div class="wrap">
-    <div class="mark">PZ Dynamics</div>
+    <div class="mark-row">
+      <svg width="34" height="34" viewBox="0 0 56 56" fill="none">
+        <path d="M8 40 C 8 24, 24 24, 24 8" stroke="var(--slate)" stroke-width="6" stroke-linecap="round"/>
+        <path d="M18 44 C 18 28, 34 28, 34 12" stroke="var(--pine)" stroke-width="6" stroke-linecap="round"/>
+        <path d="M28 48 C 28 32, 44 32, 44 16" stroke="var(--berry)" stroke-width="6" stroke-linecap="round"/>
+      </svg>
+      <div class="wordmark">PZ DYNAMICS</div>
+    </div>
 
     <h1>We build Servd, a cook-planning app for coordinating multiple dishes at once.</h1>
     <p>
