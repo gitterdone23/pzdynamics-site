@@ -5,10 +5,34 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>PZ Dynamics</title>
 <meta name="description" content="PZ Dynamics is a Canadian solo software and tech studio. Servd, a cook-planning app, is its first project.">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;600;700&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
+  /* Self-hosted rather than loaded from Google's CDN — that transfers every
+     visitor's IP address to Google on every page load with no consent
+     prompt, a real GDPR issue (see the 2022 German court ruling on this
+     exact pattern), not just a theoretical one. These are the only two
+     weights of Archivo and the one weight of Work Sans this page actually
+     uses. */
+  @font-face {
+    font-family: 'Archivo';
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+    src: url('fonts/archivo-600.woff2') format('woff2');
+  }
+  @font-face {
+    font-family: 'Archivo';
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+    src: url('fonts/archivo-700.woff2') format('woff2');
+  }
+  @font-face {
+    font-family: 'Work Sans';
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+    src: url('fonts/work-sans-400.woff2') format('woff2');
+  }
   :root {
     --steel: #F1F1EE;
     --slate: #6B6F76;
@@ -159,9 +183,6 @@
     font-size: 13px;
     color: var(--caption);
   }
-  footer a { color: var(--accent); }
-  footer .legal { margin-top: 8px; }
-  footer .legal a { margin-right: 16px; }
 </style>
 </head>
 <body>
@@ -204,10 +225,6 @@
 
     <footer>
       &copy; 2026 PZ Dynamics
-      <div class="legal">
-        <a href="https://servdapp.notion.site/Servd-Terms-of-Service-3bc58f6b2f7f80b0afb4e146d841f09f">Terms of Use</a>
-        <a href="https://servdapp.notion.site/Servd-Privacy-Policy-3bc58f6b2f7f808ca83dd8a07e14fa4a">Privacy Policy</a>
-      </div>
     </footer>
   </div>
 </body>
