@@ -5,6 +5,10 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>PZ Dynamics</title>
 <meta name="description" content="PZ Dynamics is a Canadian solo software and tech studio. Servd, a cook-planning app, is its first project.">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="icon" href="favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="48x48" href="favicon-48.png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
 <style>
   /* Self-hosted rather than loaded from Google's CDN — that transfers every
      visitor's IP address to Google on every page load with no consent
@@ -183,6 +187,11 @@
     font-size: 13px;
     color: var(--caption);
   }
+  .app-name { color: inherit; text-decoration: none; }
+  .app-name:hover { text-decoration: underline; }
+  .site-link { margin-top: 14px; font-size: 15px; }
+  .site-link a { color: var(--accent); text-decoration: none; font-weight: 600; }
+  .site-link a:hover { text-decoration: underline; }
 </style>
 </head>
 <body>
@@ -203,7 +212,7 @@
       <div class="app-card-header">
         <img src="servd-icon.png" alt="" class="app-icon">
         <div>
-          <h2>Servd: Cook Smarter</h2>
+          <h2><a class="app-name" href="https://getservdapp.com">Servd: Cook Smarter</a></h2>
           <p class="tagline">Available on the App Store and Google Play</p>
         </div>
       </div>
@@ -221,6 +230,7 @@
           <img src="google-play-badge.svg" alt="Get it on Google Play">
         </a>
       </div>
+      <p class="site-link"><a href="https://getservdapp.com">getservdapp.com &rarr;</a></p>
     </div>
 
     <footer>
